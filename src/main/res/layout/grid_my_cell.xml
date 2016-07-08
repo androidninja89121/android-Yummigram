@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.zhs1.Yummigram.utils.SquareImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:id="@+id/gridMyImageView"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/btnDropMyGrid"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:background="@drawable/img_drop_down_icon"
+        android:layout_alignRight="@+id/gridMyImageView"
+        android:layout_marginRight="20dp" />
+</RelativeLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head"
+        android:id="@+id/relativeLayout4">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/btnBackDetailChat"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_btn_back"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title_post"
+            android:id="@+id/tvTitleDetailChat"
+            android:layout_alignParentTop="false"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBaseline="@+id/btnBackDetailChat" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlyEditingDetailChat"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/comment_bg">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="@string/post"
+            android:id="@+id/btnPostDetailChat"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/post_button"
+            android:layout_centerVertical="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etxtDetailChat"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btnPostDetailChat"
+            android:layout_toStartOf="@+id/btnPostDetailChat"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/comment_input"
+            android:textColor="@color/black"
+            android:paddingLeft="10dp"
+            android:textColorHint="#ff91908e"
+            android:hint="message..." />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rlyEditingDetailChat"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/comment_divider"
+        android:id="@+id/rlySeparateLine"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewDetailChat"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_above="@+id/rlySeparateLine"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyContentDetailChat">
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

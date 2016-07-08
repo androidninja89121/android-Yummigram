@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7"
+        android:background="@drawable/message_bg"
+        android:layout_alignTop="@+id/tvChatMeGeneral"
+        android:layout_alignLeft="@+id/tvChatMeGeneral"
+        android:layout_alignBottom="@+id/tvChatMeGeneral"
+        android:layout_alignRight="@+id/tvChatMeGeneral" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvChatMeGeneral"
+        android:layout_marginRight="80dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="5dp" />
+</RelativeLayout>

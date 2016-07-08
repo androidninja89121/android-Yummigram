@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zhs1.Yummigram" >
+
+    <!-- billing permission -->
+    <!-- mandatory for PCN partners -->
+    <!-- <uses-permission android:name="com.android.vending.BILLING" /> -->
+
+
+    <!-- optional permissions -->
+    <!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_GPS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <!-- The following permissions are for push notification -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".takephoto.TakePhotoActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.CommentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.DetailChatActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.NotifyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.ProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.RecipeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.TotalChatActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.TagActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.EditCommentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".other.EditRecipeActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".TestActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.aviary.android.feather.sdk.internal.cds.AviaryCdsProvider"
+            android:authorities="com.zhs1.Yummigram.AviaryCdsProvider"
+            android:exported="false"
+            android:process=":aviarycds" />
+
+        <activity
+            android:name=".takephoto.ShareActivity"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.RECEIVE_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".MyCustomParsePushReceiver" android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

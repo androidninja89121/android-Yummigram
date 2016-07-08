@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:contentDescription="@string/image_content_description"
+        android:src="@drawable/title"
+        android:layout_gravity="center"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:id="@+id/btnCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="70dp"
+        android:text="@string/create_an_account"
+        android:textSize="17sp"
+        android:textColor="#ff343434"
+        android:background="#0000" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCreateAccount"
+        android:layout_centerHorizontal="true"
+        android:text="@string/new_here"
+        android:textColor="#ff6a6a6a"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSigninWithFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/facebook"
+        android:text="@string/sign_in_with_facebook"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/btnSigninWithFacebook"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/login"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_alignLeft="@+id/btnSigninWithFacebook"
+        android:layout_alignRight="@+id/btnSigninWithFacebook" />
+
+    <Button
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/button"
+        android:layout_alignRight="@+id/btnSigninWithFacebook"
+        android:layout_alignEnd="@+id/btnSigninWithFacebook"
+        android:background="@drawable/icon_facebook"
+        android:layout_alignBaseline="@+id/btnSigninWithFacebook"
+        android:layout_marginRight="5dp" />
+
+</RelativeLayout>

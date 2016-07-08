@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head"
+        android:id="@+id/relativeLayout4">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/btnBackComment"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_btn_back"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/title_post"
+            android:id="@+id/textView5"
+            android:layout_alignParentTop="false"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignBaseline="@+id/btnBackComment" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/rlyEditingComment"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/comment_bg">
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="@string/post"
+            android:id="@+id/btnPostComment"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/post_button"
+            android:layout_centerVertical="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etxtComment"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/btnPostComment"
+            android:layout_toStartOf="@+id/btnPostComment"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/comment_input"
+            android:textColor="@color/black"
+            android:hint="Comment"
+            android:textColorHint="#ff91908e"
+            android:paddingLeft="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rlyEditingComment"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/comment_divider"
+        android:id="@+id/rlySeparateLine"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView4"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/relativeLayout4"
+        android:layout_above="@+id/rlySeparateLine"
+        android:layout_marginTop="-10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/recipe_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlyTop"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rlyUserInfo"
+                        android:gravity="center_vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="30dp">
+
+                        <com.pkmmte.view.CircularImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/imgbUserPhoto"
+                            android:src="@drawable/men_sample"
+                            app:border="true"
+                            app:border_color="#EEEEEE"
+                            app:border_width="4dp"
+                            app:shadow="true" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/sample_name"
+                            android:id="@+id/btnFullName"
+                            android:layout_alignParentTop="false"
+                            android:layout_toRightOf="@+id/imgbUserPhoto"
+                            android:layout_toEndOf="@+id/imgbUserPhoto"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_alignTop="@+id/imgbUserPhoto"
+                            android:background="#0000"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:text="@string/sample_time"
+                            android:id="@+id/tvTime"
+                            android:textColor="#ffaaaaaa"
+                            android:textSize="15sp"
+                            android:layout_alignBottom="@+id/imgbUserPhoto"
+                            android:layout_toRightOf="@+id/imgbUserPhoto"
+                            android:layout_marginLeft="5dp" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="@string/recipe_request"
+                        android:id="@+id/btnRecipeRequest"
+                        android:background="@drawable/borders_recipe_request"
+                        android:textColor="@color/red_app"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="12sp"
+                        android:layout_marginRight="10dp" />
+
+                    <Button
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/btnRecipe"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:background="@drawable/recipe_button"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/rlyUserInfo" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/sample_self_comment"
+                    android:id="@+id/tvSelfComment"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/black" />
+
+                <com.zhs1.Yummigram.utils.SquareImageView
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/imgvWall"
+                    android:layout_gravity="center_horizontal"
+                    android:contentDescription="@string/image_content_description"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp" />
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/btnShareFacebook"
+                    android:layout_gravity="right"
+                    android:background="@drawable/bg_btn_facebook_share"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:id="@+id/lyControl"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rlyLike"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_alignWithParentIfMissing="false"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:id="@+id/imgvLike"
+                                android:background="@drawable/post_icons_heart"
+                                android:layout_gravity="center_vertical" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:id="@+id/tvLike"
+                                android:text="12"
+                                android:textColor="#ff008497"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rlyComment"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:id="@+id/imgvComment"
+                                android:background="@drawable/post_icons_comment"
+                                android:layout_gravity="center_vertical" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="67"
+                                android:id="@+id/tvComment"
+                                android:textColor="#ff008497"
+                                android:textStyle="bold"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/rlyFavorite"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:id="@+id/imgvFavorite"
+                            android:background="@drawable/post_icons_star"
+                            android:layout_gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lyContentComment"
+                android:layout_marginBottom="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

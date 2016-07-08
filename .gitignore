@@ -1,0 +1,12 @@
+/build
+/gen/*.*
+/bin
+/local.properties
+lint.xml
+.idea/
+.settings/
+*.iml
+/proguard_configuration.txt
+/proguard_dump.txt
+/proguard_keep.txt
+/proguard_unused.txt

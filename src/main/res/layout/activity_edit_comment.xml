@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/head">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/btnBackEditComment"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_btn_back"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Edit Comment"
+            android:id="@+id/textView12"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/btnBackEditComment" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imgvEditComment"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/etxtCommentEditComment"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgvEditComment"
+            android:layout_toEndOf="@+id/imgvEditComment"
+            android:layout_margin="5dp"
+            android:background="@drawable/input"
+            android:textColor="#ff343434"
+            android:textCursorDrawable="@null"
+            android:textColorHint="#ffacacac"
+            android:hint="Add Comments"
+            android:gravity="left|top"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Save"
+        android:id="@+id/btnSaveEditComment"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/follow_button_active"
+        android:textSize="18sp" />
+</LinearLayout>

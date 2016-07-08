@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/conversations_cell_unread">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlyUserInfoNotify"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true">
+
+        <com.pkmmte.view.CircularImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgbUserPhotoNotify"
+            android:src="@drawable/men_sample"
+            app:border="true"
+            app:border_color="#EEEEEE"
+            app:border_width="4dp"
+            app:shadow="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/sample_name"
+            android:id="@+id/btnFullNameNotify"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/imgbUserPhotoNotify"
+            android:layout_toEndOf="@+id/imgbUserPhotoNotify"
+            android:textColor="#ff008497"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/imgbUserPhotoNotify"
+            android:background="#0000"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/sample_time"
+            android:id="@+id/tvDescFirstNotify"
+            android:textColor="#ffe04d25"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/imgbUserPhotoNotify"
+            android:layout_toRightOf="@+id/imgbUserPhotoNotify"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="your post"
+            android:id="@+id/tvDescSecondNotify"
+            android:textSize="16sp"
+            android:textColor="#ffacaba6"
+            android:layout_alignTop="@+id/tvDescFirstNotify"
+            android:layout_alignBottom="@+id/tvDescFirstNotify"
+            android:layout_toRightOf="@+id/tvDescFirstNotify" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgvWallNotify"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12m"
+        android:id="@+id/tvTimeNotify"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/imgvWallNotify"
+        android:layout_toStartOf="@+id/imgvWallNotify"
+        android:textColor="#ffaaaaaa" />
+</RelativeLayout>

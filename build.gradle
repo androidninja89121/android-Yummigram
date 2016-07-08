@@ -1,0 +1,107 @@
+buildscript {
+    repositories {
+    	mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+    }
+}
+
+
+allprojects {
+    apply plugin: 'maven'
+
+    tasks.withType(JavaCompile) {
+        options.incremental = true
+    }
+
+    repositories {
+        mavenCentral()
+        jcenter()
+		
+		maven {
+            url "${project.rootDir}/creativesdk-repo/release"  //ADD THE CORRECT LOCATION OF THE CREATIVESDK LIBRARY FILES
+        }
+
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "com.zhs1.Yummigram"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('release.key')
+            storePassword '123456'
+            keyAlias 'alias'
+            keyPassword '123456'
+        }
+    }
+
+    sourceSets {
+        main {
+            setRoot 'src/main'
+        }
+
+        debug {
+            setRoot 'src/debug'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+    }
+
+    dexOptions {
+        jumboMode true
+        incremental true
+        preDexLibraries false
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.adobe.creativesdk:image:4.0.0'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'com.pkmmte.view:circularimageview:1.1'
+    compile 'info.hoang8f:android-segmented:1.0.4'
+    compile 'com.facebook.android:facebook-android-sdk:3.20.0'
+    compile 'in.srain.cube:grid-view-with-header-footer:1.0.12'
+    compile 'com.baoyz.actionsheet:library:1.1.0'
+    compile 'com.kyleduo.switchbutton:library:1.2.8'
+    compile 'com.squareup.picasso:picasso:2.3.3'
+}

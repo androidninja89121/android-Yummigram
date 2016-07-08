@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.zhs1.Yummigram">
+
+
+	<application>
+
+		<!-- Use the staging CDS -->
+		<meta-data
+			android:name="com.aviary.android.feather.v1.CDS_DEBUG"
+			android:value="true" />
+	</application>
+
+</manifest>

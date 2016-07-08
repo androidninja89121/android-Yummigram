@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/conversations_cell">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlyUserInfoTotalChat"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/tvTimeTotalChat"
+        android:layout_toStartOf="@+id/tvTimeTotalChat"
+        android:layout_marginRight="20dp">
+
+        <com.pkmmte.view.CircularImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imgbUserPhotoTotalChat"
+            android:src="@drawable/men_sample"
+            app:border="true"
+            app:border_color="#EEEEEE"
+            app:border_width="4dp"
+            app:shadow="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/sample_name"
+            android:id="@+id/btnFullNameTotalChat"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/imgbUserPhotoTotalChat"
+            android:layout_toEndOf="@+id/imgbUserPhotoTotalChat"
+            android:textColor="#ff008497"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/imgbUserPhotoTotalChat"
+            android:background="#0000"
+            android:layout_marginLeft="5dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="You:"
+            android:id="@+id/tvYouTotalChat"
+            android:textSize="16dp"
+            android:textColor="#ff959595"
+            android:layout_below="@+id/btnFullNameTotalChat"
+            android:layout_alignLeft="@+id/btnFullNameTotalChat" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/sample_time"
+            android:id="@+id/tvConversationTotalChat"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_alignBottom="@+id/tvYouTotalChat"
+            android:layout_toRightOf="@+id/tvYouTotalChat"
+            android:layout_marginLeft="5dp"
+            android:layout_alignTop="@+id/tvYouTotalChat" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12m"
+        android:id="@+id/tvTimeTotalChat"
+        android:layout_centerVertical="true"
+        android:textColor="#ffaaaaaa"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp" />
+</RelativeLayout>

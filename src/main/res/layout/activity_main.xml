@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".MainParentActivity" >
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlyTitle"
+        android:layout_marginBottom="50dp">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyTitle"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/head" >
+
+        <RelativeLayout
+            android:id="@+id/rlyProfileGroup"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/profile"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnSetting"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_setting" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlySettingGroup"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/setting"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnBackSetting"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_btn_back" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_logout" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyOtherGroup"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <Button
+                android:id="@+id/btnBackOther"
+                android:layout_width="44dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_btn_back" />
+
+            <TextView
+                android:id="@+id/tvTitleOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/push_notification"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlySearchBarGroup"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" >
+
+            <Button
+                android:id="@+id/btnChat"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_chat_default" />
+
+            <Button
+                android:id="@+id/btnNotify"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_alarm_default" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:background="@drawable/search"
+                android:layout_alignLeft="@+id/searchView"
+                android:layout_alignRight="@+id/searchView"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="2dp" />
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/btnNotify"
+                android:layout_toRightOf="@+id/btnChat"
+                android:queryHint="@string/search"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="1dp"
+                style="@style/AviaryActionBar"
+                android:baselineAligned="false"
+                android:layout_marginLeft="10dp">
+
+            </SearchView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lyTab"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
+        android:background="@drawable/tabbar_news"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlyTabNewsFeed"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyTabRecipe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyTabCamera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyTabFavorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlyTabProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

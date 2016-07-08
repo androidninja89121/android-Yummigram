@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_dk">#313031</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="blue">#008ace</color>
+    <color name="gray">#5B5B5B</color>
+    <color name="green_app">#2DAA16</color>
+    <color name="red_app">#970c36</color>
+	<color name="dkGray">#ff191919</color>
+</resources>

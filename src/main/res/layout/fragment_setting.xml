@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView5" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Push Notifications"
+                android:id="@+id/textView13"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="When would you like to receive"
+                android:id="@+id/textView20"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="notifications"
+                android:id="@+id/textView21"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/notificatons_bg_up">
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnComment"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="When someone comments on my photo"
+                    android:id="@+id/textView14"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/comment_divider"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"></LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/notificatons_bg_center">
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnMessage"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="When someone sends me a message"
+                    android:id="@+id/textView15"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/comment_divider"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/notificatons_bg_center" >
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnLike"
+                    android:layout_column="39"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="When someone likes my photo"
+                    android:id="@+id/textView17"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/comment_divider"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/notificatons_bg_center" >
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnFollow"
+                    android:layout_column="39"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="When someone follows me on Yummigram"
+                    android:id="@+id/textView18"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/comment_divider"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/notificatons_bg_down" >
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnFavorite"
+                    android:layout_column="39"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentRight="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="When someone adds my photo as a favorite"
+                    android:id="@+id/textView16"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginBottom="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Push Notifications"
+                android:id="@+id/textView22"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/photo_effects_bg">
+
+                <view
+                    class="com.kyleduo.switchbutton.SwitchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchBtnPhoto"
+                    android:layout_column="39"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Would you like to use photo effects"
+                        android:id="@+id/textView19"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentTop="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="when sharing photos?"
+                        android:id="@+id/textView23"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="false"
+                        android:layout_alignParentTop="true" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

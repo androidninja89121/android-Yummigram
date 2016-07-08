@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/followers_cell"
+    android:padding="10dp">
+
+    <com.pkmmte.view.CircularImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgbUserPhotoForUserCell"
+        android:src="@drawable/men_sample"
+        app:border="false"
+        app:border_color="#EEEEEE"
+        app:border_width="4dp"
+        app:shadow="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgbUserPhotoForUserCell"
+        android:layout_marginLeft="20dp"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvUserNameForUserCell"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imgbUserPhotoForUserCell"
+            android:layout_toEndOf="@+id/imgbUserPhotoForUserCell"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/tvPostsForUserCell"
+                android:layout_weight="1"
+                android:textColor="#ff91908e" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/tvFollowersForUserCell"
+                android:layout_weight="1"
+                android:textColor="#ff91908e" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/tvFollowingsForUserCell"
+                android:layout_weight="1"
+                android:textColor="#ff91908e" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

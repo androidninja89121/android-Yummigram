@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/head"
+        android:id="@+id/relativeLayout5">
+
+        <Button
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:id="@+id/btnBackProfile"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/bg_btn_back"
+            android:layout_alignParentTop="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/profile"
+            android:id="@+id/textView9"
+            android:layout_centerHorizontal="true"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/btnBackProfile" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlyUserInfoOtherProfile"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/relativeLayout5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp">
+
+        <com.pkmmte.view.CircularImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/imgbUserPhotoOtherProfile"
+            android:src="@drawable/men_sample"
+            app:border="true"
+            app:border_color="#EEEEEE"
+            app:border_width="4dp"
+            app:shadow="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/sample_name"
+            android:id="@+id/btnFullNameOtherProfile"
+            android:layout_alignParentTop="false"
+            android:layout_toRightOf="@+id/imgbUserPhotoOtherProfile"
+            android:layout_toEndOf="@+id/imgbUserPhotoOtherProfile"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_alignTop="@+id/imgbUserPhotoOtherProfile"
+            android:background="#0000"
+            android:layout_marginLeft="5dp" />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:text="@string/following"
+            android:id="@+id/btnFollowing"
+            android:background="@drawable/follow_button_active"
+            android:layout_toRightOf="@+id/imgbUserPhotoOtherProfile"
+            android:textSize="16sp"
+            android:layout_below="@+id/btnFullNameOtherProfile" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/btnSendMessage"
+            android:background="@drawable/send_message_icon"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/btnFollowing"
+            android:layout_marginLeft="20dp"
+            android:layout_alignBaseline="@+id/btnFollowing" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rlyUserInfoOtherProfile"
+        android:id="@+id/lySegmentedButtonProfile"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rlyPhotosProfile">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgvPhotosProfile"
+                android:scaleType="fitXY"
+                android:src="@drawable/three_tabs_1_active" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1 photos"
+                android:id="@+id/tvPhotosProfile"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rlyFollowersProfile">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgvFollowersProfile"
+                android:scaleType="fitXY"
+                android:src="@drawable/three_tabs_2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="1 Followers"
+                android:id="@+id/tvFollowersProfile"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/rlyFollowingsProfile">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/imgvFollowingsProfile"
+                android:scaleType="fitXY"
+                android:src="@drawable/three_tabs_3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="2 Following"
+                android:id="@+id/tvFollowingsProfile"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/gray"
+        android:id="@+id/lySeparator"
+        android:layout_below="@+id/lySegmentedButtonProfile" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollViewOtherProfile"
+        android:layout_below="@+id/lySeparator"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_above="@+id/imgvSpinnerOtherProfile">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lyContentOtherProfile"></LinearLayout>
+    </ScrollView>
+
+    <in.srain.cube.views.GridViewWithHeaderAndFooter
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridViewOtherProfile"
+        android:numColumns="2"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="2dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:verticalScrollbarPosition="right"
+        android:stretchMode="columnWidth"
+        android:layout_below="@+id/lySeparator" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/imgvSpinnerOtherProfile"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@animator/spinner_anim" />
+
+</RelativeLayout>

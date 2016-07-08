@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/lyCT">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView9"
+                android:background="@drawable/message_bg"
+                android:layout_alignTop="@+id/tvChatOtherLast"
+                android:layout_alignLeft="@+id/tvChatOtherLast"
+                android:layout_alignBottom="@+id/tvChatOtherLast"
+                android:layout_alignRight="@+id/tvChatOtherLast" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvChatOtherLast"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:paddingLeft="5dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/tvTimeChatOther"
+            android:textSize="17sp"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+    <com.pkmmte.view.CircularImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/imgbUserPhotoForChatOtherCell"
+        android:src="@drawable/men_sample"
+        app:border="false"
+        app:border_color="#EEEEEE"
+        app:border_width="4dp"
+        app:shadow="true"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="false"
+        android:layout_alignBottom="@+id/lyCT"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>
